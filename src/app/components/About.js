@@ -29,7 +29,7 @@ export default function About() {
             <p className="mt-4 text-lg font-cocoLight text-gray-700">
               Top Ten <span className="text-[#db0a6c]">e</span>Marketing nasce dalla collaborazione di due aziende con un obiettivo comune: aiutare le piccole imprese locali ad attirare più clienti. Fondata nel 2022, Top Ten <span className="text-[#db0a6c]">e</span>Marketing vanta oltre 15 anni di esperienza nel lavorare con aziende di tutte le dimensioni, dalle piccole imprese ai marchi internazionali, operando in diversi settori.
               <br /><br />
-              Grazie alla nostra esperienza e al nostro team internazionale con sede in Europa e negli Stati Uniti, comprendiamo le difficoltà nel catturare l'attenzione di clienti sfuggenti in un mondo sempre più frenetico. Il nostro team ha le competenze per trovare quei clienti e indirizzarli verso la tua attività.
+              Grazie alla nostra esperienza e al nostro team internazionale con sede in Europa e negli Stati Uniti, comprendiamo le difficoltà nel catturare l&apos;attenzione di clienti sfuggenti in un mondo sempre più frenetico. Il nostro team ha le competenze per trovare quei clienti e indirizzarli verso la tua attività.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">

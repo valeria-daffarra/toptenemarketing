@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Link as LinkScroll } from "react-scroll";
-import { Home, Boxes, UserRound, BookOpen, MessageCircle } from "lucide-react";
+import { Home, Boxes, UserRound, MessageCircle } from "lucide-react";
 
 export default function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);

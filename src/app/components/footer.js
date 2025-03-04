@@ -3,17 +3,17 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
+  //const [email, setEmail] = useState('');
   const [currentYear, setCurrentYear] = useState(2024);
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
   }, []);
 
-  const handleSubmit = (e) => {
+  /*const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Newsletter signup:', email);
-  };
+  };*/
 
   return (
     <footer className="relative pt-16">

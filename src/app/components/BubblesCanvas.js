@@ -3,13 +3,12 @@ import { useRef, useEffect } from "react";
 
 const BubblesCanvas = () => {
   const canvasRef = useRef(null);
-  const bubbles = [];
-  const iconPaths = ["/icon1.svg", "/icon2.svg", "/icon3.svg", "/icon4.svg", "/icon5.svg", "/icon6.svg", "/icon7.svg"]; // Add more as needed
+  const iconPaths = ["/icon1.svg", "/icon2.svg", "/icon3.svg", "/icon4.svg", "/icon5.svg", "/icon6.svg", "/icon7.svg"];
   const colors = ["#02a9f5", "#df7915", "#6c4484", "#db0a6c"]; // Bubble colors
-  const images = [];
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
 
     let width, height;
@@ -21,11 +20,10 @@ const BubblesCanvas = () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Preload images
-    iconPaths.forEach((src) => {
+    const images = iconPaths.map((src) => {
       const img = new Image();
       img.src = src;
-      images.push(img);
+      return img;
     });
 
     class Bubble {
@@ -74,9 +72,7 @@ const BubblesCanvas = () => {
       }
     }
 
-    for (let i = 0; i < 20; i++) {
-      bubbles.push(new Bubble());
-    }
+    const bubbles = Array.from({ length: 20 }, () => new Bubble());
 
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
@@ -84,13 +80,12 @@ const BubblesCanvas = () => {
       requestAnimationFrame(animate);
     };
 
-    // Start animation once images are loaded
     Promise.all(images.map(img => new Promise(resolve => (img.onload = resolve)))).then(animate);
 
     return () => window.removeEventListener("resize", resizeCanvas);
-  }, []);
+  }, [iconPaths, colors]); // ✅ Added dependencies
 
-  return <canvas ref={canvasRef} style={{ position: "absolute", top: 0, left: 0, zIndex:-10 }} />;
+  return <canvas ref={canvasRef} style={{ position: "absolute", top: 0, left: 0, zIndex: -10 }} />;
 };
 
 export default BubblesCanvas;
