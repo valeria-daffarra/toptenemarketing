@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cocoBold: ['CocoMatBold', 'sans-serif'],
+        cocoLight: ['CocoMatLight', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
