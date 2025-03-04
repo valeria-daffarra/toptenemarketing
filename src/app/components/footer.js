@@ -46,10 +46,10 @@ export default function Footer() {
           background: 'linear-gradient(to right, #02a9f5, #df7915, #6c4484, #db0a6c)'
         }}
       >
-        <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left">
+        <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-around text-center md:text-left">
           
           {/* Logo (Centered on Mobile) */}
-          <div className="mb-6 md:mb-0 self-center">
+          <div className="mb-6 md:mb-0 self-center ">
             <Image 
               src="/topten.svg" 
               alt="TopTen Marketing Logo" 

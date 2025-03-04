@@ -4,7 +4,8 @@ import Navigation from './components/Navigation'
 import Servizi from './components/Servizi'
 import About from './components/About'
 import ContactPage from './components/ContactPage';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+
 export default function Home() {
   return (
     <>
